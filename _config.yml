@@ -72,3 +72,15 @@ deploy:
   type: git
   repository: https://github.com/wx962464/wx962464.github.io.git
   branch: master
+
+#CNAME
+plugins:
+- hexo-generator-cname
+
+#rss feed
+plugins:
+- hexo-generator-feed
+
+plugins:
+- hexo-generator-sitemap
+
