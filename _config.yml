@@ -68,10 +68,16 @@ stylus:
   compress: true
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
+
+#deploy:
+#  type: git
+#  repository: https://github.com/wx962464/wx962464.github.io.git
+#  branch: master
+
 deploy:
   type: git
-  repository: https://github.com/wx962464/wx962464.github.io.git
-  branch: master
+  repository: https://gitcafe.com/wx962464/wx962464.git
+  branch: gitcafe-pages
 
 #CNAME
 plugins:
@@ -84,3 +90,7 @@ plugins:
 plugins:
 - hexo-generator-sitemap
 
+feed:
+  type: atom       #feed 类型 (atom/rss2)
+  path: atom.xml   #rss 路径
+  limit: 20        #在 rss 中最多生成的文章数(0显示所有)
