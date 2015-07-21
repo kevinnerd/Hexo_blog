@@ -1,6 +1,6 @@
 title: "Android 源码编译服务器问题汇总"
 date: 2015-06-21 18:40:24
-tags: Android Linux
+tags: Android,Linux
 ---
 **欢迎访问 [wxtlife.com](http://www.wxtlife.com/)**
 1. **安装工具及服务**
