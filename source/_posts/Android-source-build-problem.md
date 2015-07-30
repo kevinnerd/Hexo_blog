@@ -36,7 +36,7 @@ tags: Android,Linux
 
 **特技：如何让sudo操作不用输入密码** 
      修改/etc/sudoers 里面的配置：
-     ```
+```
      # User privilege specification
        root    ALL=(ALL:ALL) ALL
      # Members of the admin group may gain root privileges
@@ -44,8 +44,9 @@ tags: Android,Linux
     # Allow members of group sudo to execute any command
       %sudo   ALL=(ALL) NOPASSWD: ALL 
       cvtouch ALL=(ALL) NOPASSWD: ALL
-    ```
-    上面注意要修改sudoers的权限，但是注意不要改为777，不然后面很麻烦。如果已经改了，可以见下面这个文章中的操作来解决.[http://blog.csdn.net/davidsky11/article/details/23478131](http://blog.csdn.net/davidsky11/article/details/23478131)
+```   
+	
+上面注意要修改sudoers的权限，但是注意不要改为777，不然后面很麻烦。如果已经改了，可以见下面这个文章中的操作来解决.[http://blog.csdn.net/davidsky11/article/details/23478131](http://blog.csdn.net/davidsky11/article/details/23478131)   
     
 **注意：**
     当我们用root用户账号登录，使用远程操作如jsch库来操作，操作`git pull及 repo forall -c git pull` 都不起作用，导致远程无法更新代码，原因是权限太高使用的不是user/bin 下面的repo 而是系统/bin 下面的repo，导致无法更新，操作办法是将 user/bin 下面的复制到系统的/bin下面，再次重新登录尝试就ok了。
